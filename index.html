@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href='styles.css'>
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sixtyfour&family=Underdog&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 Class="Title OpenSans">Timo Schellekens</h1>
+    <div class="Scale Header">
+        <button class="Button OpenSans" id="ProjectsButton">Mijn projecten</button>
+        <button class="Button OpenSans" id="WhoAmIButton">Wie ben ik</button>
+        <button class="Button OpenSans" id="StrongSidesButton">Mijn sterke kanten</button>
+        <button class="Button OpenSans" id="ContactButton">Contact</button>
+        <div class="HeaderHRDiv">
+            <hr class="HeaderHR"></hr>
+            <hr class="HeaderHR"></hr>
+        </div>
+    </div>
+    <div class="InBetween Scale">
+        <hr class="InBetweenLine"></hr>
+        <h1 Class="InBetweenTitle OpenSans">Mijn projecten</h1>
+        <hr class="InBetweenLine"></hr>
+    </div> 
+    <div class="Projects Scale">
+        <p class="CenterAlign Description TextLine OpenSans">Dit zijn alle projecten waar ik ooit aan heb gewerkt.</p>
+        <div class="ProjectDivs">
+            <div class="ProjectObject">
+                <img class="ProjectImage" src="Steam Deck Site - Opera 10-4-2025 14_45_11.png" alt="GoodFood Image">
+                <button class="CenterAlign ProjectsDescriptionButton OpenSans" onclick="location.href='https://redstonetimonl.github.io/SchoolSteamDeckSite2'">Steam Deck Site</button>
+            </div>
+            <div class="ProjectObject">
+                <img class="ProjectImage" src="Xbox draadloze controller – Pulse Cipher Special Edition _ Xbox - Opera 20-3-2025 11_38_04.png" alt="GoodFood Image">
+                <button class="CenterAlign ProjectsDescriptionButton OpenSans" onclick="location.href='https://redstonetimonl.github.io/ControllerSite/'">Xbox draadloze controller – Pulse Cipher Special Edition site</button>
+            </div>
+            <div class="ProjectObject">
+                <img class="ProjectImage" src="Good_Food-menukaart.png" alt="GoodFood Image">
+                <p class="CenterAlign ProjectsDescriptionButton OpenSans" onclick="href.window='Good_Food-menukaart'">Good Food Kaart</p>
+            </div>
+        </div>
+    </div>
+    <div class="InBetween Scale">
+        <hr class="InBetweenLine"></hr>
+        <h1 Class="InBetweenTitle OpenSans">Wie ben ik</h1>
+        <hr class="InBetweenLine"></hr>
+    </div>
+    <div class="WhoAmI Scale">
+        <p class="AlignLeft RotateRight Description TextLine OpenSans" id="ScrollAnimateableLeft">Hoi, ik ben Timo. Ik ben een 18-jarige Nederlandse frontend-developer in opleiding. De programmeertalen die ik beheers, zijn Node.js, HTML, CSS, Lua en JavaScript. Mijn doel is om een fullstack-developer te worden. Dat houdt in dat ik zowel de frontend- als de backend-ontwikkelingen zal verzorgen.</p>
+        <!-- <p class="Description TextLine OpenSans">Ik heb deze website ontworpen voor een schoolopdracht. Ik heb dit ontwerp gekozen omdat ik hou van minimalistische en rustige designs, zonder felle kleuren. Niet een hele pagina vol met tekst en elementen, maar gewoon een rustig en consistent ontwerp.</p> -->
+        <p class="AlignRight RotateLeft Description TextLine OpenSans" id="ScrollAnimateableRight">Vanaf jonge leeftijd ben ik al bezig met het bouwen van dingen. Vroeger waren dat kleine Minecraft-servers, waarbij ik configuratiebestanden aanpaste om alles beter te laten werken. Later ontdekte ik ChatGPT en Roblox Studio, die me introduceerden in de wereld van development.</p>
+    </div> 
+    <div class="InBetween Scale">
+        <hr class="InBetweenLine"></hr>
+        <h1 Class="InBetweenTitle OpenSans">Mijn sterke kanten</h1>
+        <hr class="InBetweenLine"></hr>
+    </div> 
+    <div class="Scale StrongSides">
+        <p class="AlignRight CenterAlign RotateLeft Description TextLine OpenSans" id="ScrollAnimateableLeft">Mijn sterke kanten zijn vooral probleemoplossend denken en het vinden van omwegen in code om toch iets te laten werken. Ook ben ik in staat om snel en netjes code te schrijven en dingen voor elkaar te krijgen.</p>
+    </div> 
+    <div class="InBetween">
+        <hr class="InBetweenLine"></hr>
+        <h1 Class="InBetweenTitle OpenSans">Contact</h1>
+        <hr class="InBetweenLine"></hr>
+    </div> 
+    <div class="Contact Scale">
+        <p class="CenterAlign Description TextLine OpenSans">Neem contact met mij op via email of via het contactformulier. Ik zal zo snel mogelijk een antwoord geven.</p>
+        <form class="EmailForm">
+            <input class="Imput OpenSans" type="email" name="email" placeholder="Email" required>
+            <textarea class="Imput OpenSans" name="message" placeholder="Bericht" required></textarea>
+            <button class="Button OpenSans" type="submit">Verstuur</button>
+        </form>
+    </div>    
+</body>
+<footer>
+    <script>
+        document.addEventListener('scroll', () => {
+    const elementsLeft = document.querySelectorAll('[id="ScrollAnimateableLeft"]');
+    elementsLeft.forEach((element) => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (elementPosition < windowHeight) {
+            element.classList.add('in-view');
+        } else {
+            element.classList.remove('in-view');
+        }
+    });
+
+    const elementsRight = document.querySelectorAll('[id="ScrollAnimateableRight"]');
+    elementsRight.forEach((element) => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (elementPosition < windowHeight) {
+            element.classList.add('in-view');
+        } else {
+            element.classList.remove('in-view');
+        }
+    });
+});
+    </script>
+
+
+            <script>
+        function setupSmoothScroll(buttonId, targetClassName) {
+    document.getElementById(buttonId).addEventListener('click', function() {
+        const targetElement = document.querySelector(`.${targetClassName}`);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            console.error(`Element with class "${targetClassName}" not found.`);
+        }
+    });
+}
+
+// Example usage
+document.addEventListener('DOMContentLoaded', function() {
+    setupSmoothScroll('ProjectsButton', 'Projects');
+    setupSmoothScroll('WhoAmIButton', 'WhoAmI');
+    setupSmoothScroll('StrongSidesButton', 'StrongSides');
+    setupSmoothScroll('ContactButton', 'Contact');
+});
+    </script>
+</footer>
+</html>

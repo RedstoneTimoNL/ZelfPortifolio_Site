@@ -1,0 +1,315 @@
+
+body { 
+    margin: 0;
+    padding: 0;
+    background-image: url("https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    width: 100%;
+  }
+
+  :root {
+    --maincolor: white;
+    --backgroundcolor1: whitesmoke;
+    --darkcolor: black;
+    --graycolor: rgb(190, 186, 186);
+  }
+
+  #ScrollAnimateableLeft, #ScrollAnimateableRight {
+    transform: translateX(-100px) rotate(-2.5deg); 
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+#ScrollAnimateableRight {
+    transform: translateX(100px) rotate(2.5deg); 
+}
+
+#ScrollAnimateableLeft.in-view, #ScrollAnimateableRight.in-view {
+    transform: translateX(0) rotate(-2.5deg); 
+    opacity: 1;
+}
+
+#ScrollAnimateableLeft:hover, #ScrollAnimateableRight:hover {
+    transform: scale(1.1); 
+}
+
+  .Button:hover {
+    background-color: rgb(58, 58, 58);
+    transform: scale(1.1);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .TextLine:hover {
+    transform: scale(1.05);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .ProjectsDescriptionButton:hover {
+    transform: scale(1.05);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .ProjectsDescriptionButton:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease-in-out;
+  }
+
+  .RotateLeft {
+    transform: rotate(2.5deg);
+  }
+
+  .RotateRight {
+    transform: rotate(-2.5deg); 
+  }
+
+  .OpenSans {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+  }
+
+  .Scale {
+    width: 100%;
+  }
+
+.Header {
+  display: flex;
+  background-color: var(--graycolor);
+  margin-top: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  gap: 1em;
+  padding-left: 2em;
+  position: sticky;
+}
+
+.Button:active {
+  transform: scale(0.95);
+  transition: transform 0.1s ease-in-out;
+}
+
+.HeaderHRDiv {
+  width: 60%;
+}
+
+.HeaderHR {
+  width: 90%;
+  height: 2px;
+  background-color: black;
+}
+
+.Button {
+  height: 2em;
+  width: 10%;
+  border: none;
+  background-color: var(--darkcolor);
+  color: var(--maincolor);
+  border-radius: 10%;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.4;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+  .Title {
+    display: flex;
+    width: 60%;
+    font-size: 4em;
+    color: var(--maincolor);
+    text-align: center;
+    padding-left: 20%;
+    position: relative;
+  }
+
+  .AlignLeft {
+    margin-right: 10%;
+  }
+
+  .AlignRight {
+    margin-left: 10%;
+  }
+
+  .CenterAlign {
+    margin: 0 auto;
+  }
+
+  .TextLine {
+    display: flex;
+    font-size: 1.4em;
+    line-height: 1.7;
+    font-weight: 550;
+    background-color: var(--graycolor);
+    text-align: center;
+    justify-content: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .Section {
+    display: flex;
+    justify-content: center;
+    border: 1px solid burlywood;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
+    background-color: rgb(255, 235, 205);
+    margin: 0 auto;
+  }
+
+  .InBetween {
+    margin-top: 2em;
+    color: var(--backgroundcolor1);
+  }
+
+  .InBetweenLine {
+    width: 100%;
+    border: 1px solid var(--maincolor);
+    margin-bottom: 1em;
+  }
+
+  .InBetweenTitle {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 2em;
+    margin-top: 1em;
+  }
+
+  .WhoAmI {
+    display: flex;
+    margin-top: 3em;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .ProjectDivs {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .ProjectImage {
+    width: 80%;
+    padding-top: 1em;
+  }
+
+  .ProjectsDescriptionButton {
+    display: flex;
+    margin-bottom: 1em;
+    font-size: 1em;
+    line-height: 1.7;
+    font-weight: 550;
+    background-color: var(--darkcolor);
+    text-align: center;
+    justify-content: center;
+    margin-top: 5%;
+    box-shadow: 0px 2px 2px 0px var(--darkcolor);
+    color: var(--backgroundcolor1);
+    border-radius: 10px;
+    width: 70%;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .ProjectObject {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 22%;
+    height: 25em;
+    background-color: var(--graycolor);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
+    margin-top: 2%;
+    border-radius: 10px;
+  }
+
+  .Description {
+    margin-top: 0.5em;
+    display: flex;
+    font-size: 1.2em;
+    line-height: 1.5;
+    width: 70%;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 10;
+    justify-content: center;
+  }
+
+  .EmailForm {
+    display: flex;
+    background-color: var(--graycolor);
+    width: 70%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 1em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border-radius: 5%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    gap: 5%;
+    text-align: center;
+  }
+
+  .Imput {
+    background-color: var(--backgroundcolor1);
+    border: none;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    color: black;
+    width: 30%;
+    height: 3em;
+    margin-top: 1em;
+  }
+
+  @media (max-width: 768px) {
+    .Header {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .Button {
+      width: 70%;
+    }
+
+    .InBetweenTitle {
+      font-size: 1em;
+    }
+
+    .Title {
+      font-size: 1.6em;
+    }
+
+    .EmailForm {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    .Imput {
+      margin-top: 1em;
+      width: 70%;
+    }
+
+    .ProjectDivs {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      gap: 1em;
+    }
+
+    .ProjectObject {
+      width: 70%;
+    }
+  }
